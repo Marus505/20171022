@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+    <ion-title>New Game</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Title</ion-label>
+            <ion-input type="text" [(ngModel)]="input.title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Console</ion-label>
+            <ion-select [(ngModel)]="input.cid">
+                <ion-option *ngFor="let console of consoles" value="{{ console.id }}">{{ console.title }}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <button ion-button full (click)="save()">Save</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

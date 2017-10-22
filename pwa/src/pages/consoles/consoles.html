@@ -1,0 +1,24 @@
+
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Consoles</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="create()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let console of consoles">
+            {{ console.title }}
+            <span class="item-note" item-right>
+                {{ console.year }}
+            </span>
+        </button>
+    </ion-list>
+</ion-content>
